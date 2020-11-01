@@ -1,0 +1,89 @@
+html{
+	height: 100%;
+}
+body{
+	margin: 0;
+}
+body{
+	height: 100%;
+}
+/*头部区域-------------------*/
+#header{
+	width: 100%;
+	height: 70px;
+	background-color: #354457;
+}
+#header span{
+	position: absolute;
+	left: 30px;
+	font-size: 15px;
+	font-weight: 700;
+	color: #b3bcc5;
+	line-height: 70px;
+}
+/*左侧区域---------------------------*/
+#left-menu{
+	float: left;
+	width: 200px;
+	height: calc(100% - 70px);
+	background-color: #4d5e70;
+}
+#left-menu dl{
+	margin: 0;
+	font-size: 14px;
+	line-height: 40px;
+	color: #b3bcc5;
+}
+#left-menu dl dt{
+	padding-left: 10px;
+}
+#left-menu dl dd{
+	margin: 0;
+	padding-left: 50px;
+	cursor: pointer;
+}
+#left-menu dd:hover{
+	background-color: rgba(255,255,255,.5);
+	color: #354457;
+}
+#left-menu dl .active{
+	background-color: #ddd;
+	color: #354457;
+}
+/*主体区域------------------------*/
+#right-content{
+	float: left;
+	width: calc(100% - 200px);
+	height: calc(100% - 70px);
+	background-color: #eee;
+}
+/*添加学生模块*/
+.student-add{
+	position: relative;
+}
+#student-add-form{
+	position: absolute;
+	top: 50px;
+	left: calc(50% - 200px);
+	/*border: 1px solid #ccc;*/
+	width: 270px;
+}
+#student-add-form tr{
+	line-height: 30px;
+}
+/*关联两个radio的label标签除外*/
+/*属性for中包含 male 子串的label标签*/
+#student-add-form label:not([for*="male"]){
+	display: inline-block;
+	width: 50px;
+	margin-right: 5px;
+	text-align: right;
+}
+#student-add-form input{
+	outline: none;
+}
+#student-add-form .btn{
+	margin-right: 5px;
+	padding: 4px 28px;
+	cursor: pointer;
+}

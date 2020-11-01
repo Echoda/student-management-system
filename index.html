@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>学生管理系统</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<!-- 头部 -->
+	<header id="header">
+		<span>循环迭代项目</span>
+	</header>
+	<!-- 左侧菜单区 -->
+	<div id="left-menu">
+		<dl>
+			<dt>学生管理</dt>
+			<dd>学生列表</dd>
+			<dd>新增学生</dd>
+		</dl>
+	</div>
+	<!-- 主体内容区 -->
+	<div id="right-content">
+		<div class="student-list"></div>
+		<div class="student-add">
+			<form  id="student-add-form">
+				<table>
+					<tr>
+						<td><label for="add-name">姓名</label></td>
+						<td><input type="text" id="add-name"></td>
+					</tr>
+					<tr>
+						<td><label>性别</label></td>
+						<td>
+							<input type="radio" name="sex" id="add-male" checked><label for="add-male">男</label>
+							<input type="radio" name="sex" id="add-female" checked><label for="add-female">女</label>
+						</td>
+					</tr>
+					<tr>
+						<td><label for="add-email">邮箱</label></td>
+						<td><input type="text" id="add-email"></td>
+					</tr>
+					<tr>
+						<td><label for="add-number">学号</label></td>
+						<td><input type="text" id="add-number"></td>
+					</tr>
+					<tr>
+						<td><label for="add-birth">出生年</label></td>
+						<td><input type="text" id="add-birth"></td>
+					</tr>
+					<tr>
+						<td><label for="add-phone">手机号</label></td>
+						<td><input type="text" id="add-phone"></td>
+					</tr>
+					<tr>
+						<td><label for="add-address">住址</label></td>
+						<td><input type="text" id="add-address"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<input type="submit" value="提交" class="btn">
+							<input type="reset" value="重置" class="btn">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+	<script src="index.js"></script>
+</body>
+</html>
