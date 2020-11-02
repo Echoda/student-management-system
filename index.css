@@ -1,11 +1,8 @@
-html{
+html,body{
 	height: 100%;
 }
 body{
 	margin: 0;
-}
-body{
-	height: 100%;
 }
 /*头部区域-------------------*/
 #header{
@@ -16,10 +13,10 @@ body{
 #header span{
 	position: absolute;
 	left: 30px;
+	line-height: 70px;
 	font-size: 15px;
 	font-weight: 700;
 	color: #b3bcc5;
-	line-height: 70px;
 }
 /*左侧区域---------------------------*/
 #left-menu{
@@ -30,8 +27,8 @@ body{
 }
 #left-menu dl{
 	margin: 0;
-	font-size: 14px;
 	line-height: 40px;
+	font-size: 14px;
 	color: #b3bcc5;
 }
 #left-menu dl dt{
@@ -52,37 +49,111 @@ body{
 }
 /*主体区域------------------------*/
 #right-content{
-	float: left;
+	position: relative;
 	width: calc(100% - 200px);
 	height: calc(100% - 70px);
 	background-color: #eee;
+	overflow: scroll;
+}
+#right-content .student-list,
+#right-content .student-add
+{
+	display: none;
+}
+#right-content .active-content{
+	display: block;
+}
+/*学生列表模块*/
+.student-list{
+	width: 100%;
+	height: 100%;
+	line-height: 32px;
+	font-size: 14px;
+}
+.student-list > table{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.student-list thead{
+	background-color: #e3e8ee;
+	color: #64696D;
+}
+.student-list tbody{
+	height: 100%;
+	overflow: scroll;
+}
+.student-list td{
+	background-color: #fff;
+}
+.student-list > table .btn{
+	border: none;
+	outline: none;
+	color: #fff;
+	margin-right: 5px;
+	padding: 5px 8px;
+	background-color: #5cb85c;
+	cursor: pointer;
+}
+.student-list > table .remove{
+	background-color: #d9534f;
+}
+/*编辑学生弹框模块*/
+.student-edit{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+	z-index: 3;
+	display: none;
+}
+.student-edit .form-content{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 10px;
+	font-size: 16px;
+	background-color: #fff;
+	width: 270px;
+}
+.student-edit .form-content td{
+	background-color: #fff;
 }
 /*添加学生模块*/
 .student-add{
 	position: relative;
 }
-#student-add-form{
+.student-add .form-content{
 	position: absolute;
 	top: 50px;
 	left: calc(50% - 200px);
-	/*border: 1px solid #ccc;*/
+	padding: 10px;
+	font-size: 16px;
+	background-color: #eee;
 	width: 270px;
 }
-#student-add-form tr{
+/*学生信息表单共用样式*/
+.form-content tr td{
+	background-color: #eee;
+}
+.form-content tr{
 	line-height: 30px;
 }
 /*关联两个radio的label标签除外*/
 /*属性for中包含 male 子串的label标签*/
-#student-add-form label:not([for*="male"]){
+.form-content label:not([for*="male"]){
 	display: inline-block;
 	width: 50px;
 	margin-right: 5px;
 	text-align: right;
 }
-#student-add-form input{
+.form-content input{
 	outline: none;
 }
-#student-add-form .btn{
+.form-content .btn{
 	margin-right: 5px;
 	padding: 4px 28px;
 	cursor: pointer;

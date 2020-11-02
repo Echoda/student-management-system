@@ -14,46 +14,123 @@
 	<div id="left-menu">
 		<dl>
 			<dt>学生管理</dt>
-			<dd>学生列表</dd>
-			<dd>新增学生</dd>
+			<dd data-id='student-list' class="active">学生列表</dd>
+			<dd data-id='student-add'>新增学生</dd>
 		</dl>
 	</div>
 	<!-- 主体内容区 -->
 	<div id="right-content">
-		<div class="student-list"></div>
+		<!-- 学生列表 -->
+		<div class="student-list active-content">
+			<table>
+				<thead>
+					<tr>
+						<th>学号</th>
+						<th>姓名</th>
+						<th>性别</th>
+						<th>邮箱</th>
+						<th>年龄</th>
+						<th>手机号</th>
+						<th>住址</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- <tr>
+						<td>000</td>
+						<td>好好</td>
+						<td>男</td>
+						<td>33333333</td>
+						<td>20</td>
+						<td>2222222222</td>
+						<td>地方</td>
+						<td>
+							<button class="btn edit">编辑</button>
+							<button class="btn remove">删除</button>
+						</td>
+					</tr> -->
+				</tbody>
+			</table>
+			<!-- 编辑学生信息 -->
+			<div class="student-edit">
+				<form class="student-edit-form form-content">
+					<table>
+						<tr>
+							<td><label for="edit-number">学号</label></td>
+							<td><input type="text" id="edit-number" name="sNo" readonly></td> <!-- readonly只读 -->
+						</tr>
+						<tr>
+							<td><label for="edit-name">姓名</label></td>
+							<td><input type="text" id="edit-name" name="name"></td>
+						</tr>
+						<tr>
+							<td><label>性别</label></td>
+							<td>
+								<input type="radio" name="sex" id="edit-male" value="0" checked><label for="edit-male">男</label>
+								<input type="radio" name="sex" id="edit-female" value="1"><label for="edit-female">女</label>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="edit-birth">出生年</label></td>
+							<td><input type="text" id="edit-birth" name="birth"></td>
+						</tr>
+						<tr>
+							<td><label for="edit-phone">手机号</label></td>
+							<td><input type="text" id="edit-phone" name="phone"></td>
+						</tr>
+						<tr>
+							<td><label for="edit-address">住址</label></td>
+							<td><input type="text" id="edit-address" name="address"></td>
+						</tr>
+						<tr>
+							<td><label for="edit-email" >邮箱</label></td>
+							<td><input type="text" id="edit-email" name="email"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<input type="submit" value="提交" class="btn">
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+			
+		<!-- 添加学生 -->
 		<div class="student-add">
-			<form  id="student-add-form">
+			<form  class="student-add-form form-content">
 				<table>
 					<tr>
 						<td><label for="add-name">姓名</label></td>
-						<td><input type="text" id="add-name"></td>
+						<td><input type="text" id="add-name" name="name"></td>
 					</tr>
 					<tr>
 						<td><label>性别</label></td>
 						<td>
-							<input type="radio" name="sex" id="add-male" checked><label for="add-male">男</label>
-							<input type="radio" name="sex" id="add-female" checked><label for="add-female">女</label>
+							<input type="radio" name="sex" id="add-male" value="0" checked><label for="add-male">男</label>
+							<input type="radio" name="sex" id="add-female" value="1"><label for="add-female">女</label>
 						</td>
 					</tr>
 					<tr>
-						<td><label for="add-email">邮箱</label></td>
-						<td><input type="text" id="add-email"></td>
+						<td><label for="add-number">学号</label></td>
+						<td><input type="text" id="add-number" name="sNo"></td>
 					</tr>
 					<tr>
-						<td><label for="add-number">学号</label></td>
-						<td><input type="text" id="add-number"></td>
+						<td><label for="add-email" >邮箱</label></td>
+						<td><input type="text" id="add-email" name="email"></td>
 					</tr>
 					<tr>
 						<td><label for="add-birth">出生年</label></td>
-						<td><input type="text" id="add-birth"></td>
+						<td><input type="text" id="add-birth" name="birth"></td>
 					</tr>
 					<tr>
 						<td><label for="add-phone">手机号</label></td>
-						<td><input type="text" id="add-phone"></td>
+						<td><input type="text" id="add-phone" name="phone"></td>
 					</tr>
 					<tr>
 						<td><label for="add-address">住址</label></td>
-						<td><input type="text" id="add-address"></td>
+						<td><input type="text" id="add-address" name="address"></td>
 					</tr>
 					<tr>
 						<td></td>
