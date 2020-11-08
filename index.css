@@ -67,12 +67,11 @@ body{
 .student-list{
 	width: 100%;
 	height: 100%;
-	line-height: 32px;
+	line-height: 35px;
 	font-size: 14px;
 }
 .student-list > table{
 	width: 100%;
-	height: 100%;
 	text-align: center;
 }
 .student-list thead{

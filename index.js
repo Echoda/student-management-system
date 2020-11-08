@@ -1,5 +1,7 @@
 // http://open.duyiedu.com
-var appkey='junlove2020_1602508118320';
+// var appkey='junlove2020_1602508118320';
+var appkey='echo_sun_1598860417768';
+
 init();
 
 //初始化
@@ -152,7 +154,7 @@ function submit(e,form,url,successCb){
 	//拼接字符串
 	var parms = getParmStr(data);
 
-	ajax('get', 'http://open.duyiedu.com' + url,parms,(resp) => {
+	parms && ajax('get', 'http://open.duyiedu.com' + url,parms,(resp) => {
 		// console.log(resp);
 		if(resp.status == 'success'){
 			successCb(data,resp);
